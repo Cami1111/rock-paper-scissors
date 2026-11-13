@@ -1,6 +1,11 @@
 
 
 
+# stocks:
+pandas
+python-dotenv
+plotly
+
 # We will use pytest to test our program
 
 pytest
