@@ -1,43 +1,45 @@
 # rock-paper-scissors
 
-## Prerequisites
+A simple Rock, Paper, Scissors game you play in the command line, plus a stocks dashboard that shows stock prices in a chart.
 
-Install python version 3.x (for example using Anaconda).
+## What You Need
+
+- Python 3 (the easiest way to get it is [Anaconda](https://www.anaconda.com/download))
+- Git or GitHub Desktop
 
 ## Setup
 
-some instructions here
+1. Download (clone) [this repo](https://github.com/Cami1111/rock-paper-scissors) from GitHub and save it somewhere on your computer.
 
-1. Clone [the repo](https://github.com/Cami1111/rock-paper-scissors) from GitHub, and put it somewhere (like your Desktop).
-2. Navigate to the local repo from the command line (for example if on your desktop):
+2. Open your command line and go into the repo folder:
 
 ```sh
-cd ~/Desktop/rock-paper-scissors
+cd path/to/rock-paper-scissors
 ```
 
-3. Create a new Anaconda virtual environment called "rps-env" (first time only):
+3. Create a virtual environment called "rps-env". You only need to do this the first time:
 
 ```sh
 conda create -n rps-env python=3.11
 ```
 
-4. Activate the virtual environment as necessary (every time you come back to the project):
+4. Turn on the virtual environment. Do this every time you come back to the project:
 
 ```sh
 conda activate rps-env
 ```
 
-5. Install package dependencies:
+5. Install the packages this project needs. They are listed in the "requirements.txt" file:
 
 ```sh
 pip install -r requirements.txt
 ```
 
-## Configuration
+## API Key (only for the stocks dashboard)
 
-The stocks functionality requires an AlphaVantage API key. Obtain a premium AlphaVantage API Key (using the [form](https://www.alphavantage.co/support/#api-key) or shared by the prof).
+The stocks dashboard gets its data from AlphaVantage, so it needs an API key. You can get one using [this form](https://www.alphavantage.co/support/#api-key), or use one shared by the professor.
 
-Create a local ".env" file and store your environment variable in there:
+Create a file called ".env" in the main folder of the repo, and put your key in it like this:
 
 ```sh
 # this is the ".env" file...
@@ -45,39 +47,34 @@ Create a local ".env" file and store your environment variable in there:
 ALPHAVANTAGE_API_KEY="______________"
 ```
 
-## Usage
+The ".env" file stays on your computer only. It is never uploaded to GitHub, so your key stays private.
 
-some commands here to run our file(s)
+## How to Run
 
 Run the example script:
 
 ```sh
-python app/my_script.py
-
-# alternatively:
 python -m app.my_script
 ```
 
-
-Run the example script:
+Play Rock, Paper, Scissors:
 
 ```sh
-python app/rps.py
-
-# alternatively:
 python -m app.rps
 ```
 
-Stocks dashboard:
+Open the stocks dashboard:
 
 ```sh
 python -m app.stocks
 ```
 
-## Testing
+## How to Test
 
-To run tests:
+Run all the automated tests to check that the code works:
 
 ```sh
 pytest
 ```
+
+The same tests also run automatically on GitHub every time new code is added to the main branch or a pull request is opened.
