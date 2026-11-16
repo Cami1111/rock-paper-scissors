@@ -69,6 +69,24 @@ Open the stocks dashboard:
 python -m app.stocks
 ```
 
+## How to Run the Web App
+
+Start the web app. The command depends on your computer:
+
+```sh
+# Mac:
+FLASK_APP=web_app flask run
+
+# Windows (Anaconda Prompt):
+set FLASK_APP=web_app
+flask run
+
+# Any computer, if your ".env" file has the line FLASK_APP=web_app:
+flask run
+```
+
+Then open [localhost:5000](http://localhost:5000) in your browser. You can also try these pages: /about and /hello?name=YourName
+
 ## How to Test
 
 Run all the automated tests to check that the code works:
