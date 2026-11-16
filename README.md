@@ -87,6 +87,8 @@ flask run
 
 Then open [localhost:5000](http://localhost:5000) in your browser. You can also try these pages: /about and /hello?name=YourName
 
+To stop the web app, click in the command line window and press Ctrl+C.
+
 ## How to Test
 
 Run all the automated tests to check that the code works:
