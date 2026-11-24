@@ -39,9 +39,9 @@ def test_hello(test_client):
     assert b"Hello, World!" in response.data
 
     # ... with url params
-    response = test_client.get("/hello?name=Cami")
+    response = test_client.get("/hello?name=Camille")
     assert response.status_code == 200
-    assert b"Hello, Cami!" in response.data
+    assert b"Hello, Camille!" in response.data
 
 
 #
