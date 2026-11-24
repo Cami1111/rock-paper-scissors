@@ -1,9 +1,20 @@
-{% extends "layout.html" %}
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "about" %}
+
+{% block title %}About | Cami's Web App{% endblock %}
 
 {% block content %}
 
-    <h1>About Me</h1>
-
-    <p>This is a paragraph on the "about" page.</p>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <h1 class="h3 mb-3">About Me</h1>
+                <p class="lead">Hi, I'm Cami, a Business Administration (Operations &amp; Analytics) student at Georgetown's McDonough School of Business.</p>
+                <p class="text-body-secondary mb-0">I built this Flask web app for OPAN 3244. It puts a web interface on my command line Rock Paper Scissors game and stocks dashboard, uses a shared Bootstrap 5 layout, and is deployed on Render.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
