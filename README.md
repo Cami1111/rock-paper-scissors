@@ -85,9 +85,15 @@ flask run
 flask run
 ```
 
-Then open [localhost:5000](http://localhost:5000) in your browser. You can also try these pages: /about and /hello?name=YourName
+Then open [localhost:5000](http://localhost:5000) in your browser. Pages include /about, /hello?name=YourName, /rps/form (Rock Paper Scissors), and /stocks/form (Stocks Dashboard).
+
+The stocks pages need your `ALPHAVANTAGE_API_KEY` in the ".env" file. Flash messages use a `SECRET_KEY`, which you can also set in the ".env" file.
 
 To stop the web app, click in the command line window and press Ctrl+C.
+
+## Deploying
+
+See [DEPLOYING.md](DEPLOYING.md) for how this app is hosted on Render.
 
 ## How to Test
 

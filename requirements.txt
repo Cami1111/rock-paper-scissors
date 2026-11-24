@@ -1,20 +1,18 @@
 
 
-
 # stocks:
 pandas
 python-dotenv
 plotly
 
-# We will use pytest to test our program
-
+# testing:
 pytest
+beautifulsoup4 # for testing the web app pages
 
-
-
-# you might need these for the optional bonus:
-# pandas
-# plotly
 
 # web app:
 flask
+
+
+# production server:
+gunicorn
