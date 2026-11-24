@@ -1,0 +1,46 @@
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "home" %}
+
+{% block title %}Home | Cami's Web App{% endblock %}
+
+{% block content %}
+
+<section class="p-4 p-md-5 mb-4 bg-white rounded-3 shadow-sm border">
+    <h1 class="display-5 fw-bold mb-3">Welcome Home</h1>
+    <p class="col-lg-8 fs-5 text-body-secondary mb-4">
+        Play Rock Paper Scissors against the computer, or look up real-time stock prices on an interactive dashboard.
+    </p>
+    <div class="d-flex flex-wrap gap-2">
+        <a href="/rps/form" class="btn btn-primary btn-lg">
+            <i class="bi bi-controller me-2"></i>Play RPS
+        </a>
+        <a href="/stocks/form" class="btn btn-success btn-lg">
+            <i class="bi bi-graph-up-arrow me-2"></i>Stocks Dashboard
+        </a>
+    </div>
+</section>
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body p-4">
+                <div class="fs-2 text-primary mb-2"><i class="bi bi-controller"></i></div>
+                <h2 class="h5 fw-semibold">Rock Paper Scissors</h2>
+                <p class="text-body-secondary">Pick your move from a dropdown and see whether you beat the computer.</p>
+                <a href="/rps/form" class="btn btn-outline-primary">Play a Round</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body p-4">
+                <div class="fs-2 text-success mb-2"><i class="bi bi-bar-chart-line"></i></div>
+                <h2 class="h5 fw-semibold">Stocks Dashboard</h2>
+                <p class="text-body-secondary">Enter a ticker symbol to see its latest close, a price table, and a chart.</p>
+                <a href="/stocks/form" class="btn btn-outline-success">Look Up a Stock</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

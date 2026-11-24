@@ -69,6 +69,32 @@ Open the stocks dashboard:
 python -m app.stocks
 ```
 
+## How to Run the Web App
+
+Start the web app. The command depends on your computer:
+
+```sh
+# Mac:
+FLASK_APP=web_app flask run
+
+# Windows (Anaconda Prompt):
+set FLASK_APP=web_app
+flask run
+
+# Any computer, if your ".env" file has the line FLASK_APP=web_app:
+flask run
+```
+
+Then open [localhost:5000](http://localhost:5000) in your browser. Pages include /about, /hello?name=YourName, /rps/form (Rock Paper Scissors), and /stocks/form (Stocks Dashboard).
+
+The stocks pages need your `ALPHAVANTAGE_API_KEY` in the ".env" file. Flash messages use a `SECRET_KEY`, which you can also set in the ".env" file.
+
+To stop the web app, click in the command line window and press Ctrl+C.
+
+## Deploying
+
+See [DEPLOYING.md](DEPLOYING.md) for how this app is hosted on Render.
+
 ## How to Test
 
 Run all the automated tests to check that the code works:
