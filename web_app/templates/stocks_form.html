@@ -1,0 +1,33 @@
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "stocks_form" %}
+
+{% block title %}Stocks Form | Cami's Web App{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <h1 class="h3 mb-3"><i class="bi bi-graph-up-arrow me-2 text-success"></i>Stocks Form</h1>
+                <p class="text-body-secondary mb-4">Request some stock market data.</p>
+
+                <form action="/stocks/dashboard" method="POST">
+                    <div class="mb-4">
+                        <label for="symbol" class="form-label fw-semibold">Stock Symbol:</label>
+                        <input type="text" class="form-control form-control-lg text-uppercase" id="symbol" name="symbol" placeholder="MSFT" value="MSFT" required>
+                        <div class="form-text">Enter a ticker symbol, like MSFT, AAPL, GOOGL, or NFLX.</div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="bi bi-bar-chart-line me-2"></i>Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
